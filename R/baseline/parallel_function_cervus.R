@@ -60,9 +60,6 @@ while(length(stopped_runs > 0)){
 
   stopped_rerun <- parLapplyLB(cl, X = 1:length(stopped_runs), function(i){
     try(run_generation( 
-      Dmax = Dmax, 
-      Dmin = Dmin, 
-      coef.k = coef.k, 
       K.isl = K.isl,
       area = island_area[,2],
       Precol = island_area[,3],

@@ -18,12 +18,18 @@ AdaptSS <-function(G,h2m,vp0,w2,optO,optN,B,KN,coef_ID,Fw,NR,DR,vmu,bp){
   
   ##############################################################################
   
-  GS <-G[sample(nrow(G)),] 
+  n.male <-round((nrow(G)/2) / round(runif(1,4,7))) 
+  replic.male <-(nrow(G)/2)/n.male
+  Gsort <-G[order(G[,1], decreasing = T),]
+  sel.males <-Gsort[1:n.male,] 
+  Gmale <-do.call(rbind, replicate(replic.male, sel.males, simplify=FALSE))
+  Gfem <-Gsort[(nrow(G)/2):nrow(G),] 
+  Gfem <-Gfem[sample(nrow(Gfem)),] 
+  G <-rbind(Gmale,Gfem)
+  GS <-G
   G <-GS[,1]
   FS <-GS[,2]
   IB <-GS[,3]+Fw
-  
-  
 
 # genetic and environmental values of the trait ---------------------------
 

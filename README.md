@@ -20,34 +20,47 @@ The folders contain files to reproduce each simulation scenarios (1) Baseline, (
 
 ```bash
 Jersey_cervus/
-├── baseline  
-# The baseline model includes non-constant carrying capacity,phenotypic plasticity, island recolonization,
-# and sexual dimorphism.
-│   ├── AdaptSS_cervus_K.R
-│   └── parallel_function_cervus.R
-│   
-│   
-├── constant_k
-# Scripts to run baseline models with constant carrying capacity through time.
-│   ├── AdaptSS_cervus_K.R
-│   └── parallel_function_cervus.R
-│   
-├── no_plasticity
-# Scripts to run baseline models without phenotypic plasticity.
-│   ├── AdaptSS_cervus_K_no_plasticity.R
-│   └── parallel_function_cervus.R
-│   
-├── no_recolonization
-# Scripts to run baseline models without island recolonization.
-│   ├── AdaptSS_cervus_K_no_recolonization.R
-│   └── parallel_function_cervus.R
-│   
-├── no_reproduction_system
-# Scripts to run baseline models without sexual dimorphism.
-│   ├── AdaptSS_cervus_no_reproduction_system.R
-│   └── parallel_function_cervus.R
-│   
-├── island_area.txt
+├── R
+│   ├── baseline  
+│   │ # The baseline model includes non-constant carrying capacity,phenotypic plasticity, island recolonization,
+│   │ # and sexual dimorphism.
+│   │   ├── AdaptSS_cervus_K.R
+│   │   └── parallel_function_cervus.R
+│   │
+│   ├── constant_k
+│   │   # Scripts to run baseline models with constant carrying capacity through time.
+│   │   ├── AdaptSS_cervus_K.R
+│   │   └── parallel_function_cervus.R
+│   │
+│   ├── no_plasticity
+│   │   # Scripts to run baseline models without phenotypic plasticity.
+│   │   ├── AdaptSS_cervus_K_no_plasticity.R
+│   │   └── parallel_function_cervus.R
+│   │
+│   ├── no_recolonization
+│   │   # Scripts to run baseline models without island recolonization.
+│   │   ├── AdaptSS_cervus_K_no_recolonization.R
+│   │   └── parallel_function_cervus.R
+│   │
+│   └── no_reproduction_system
+│       # Scripts to run baseline models without sexual dimorphism.
+│       ├── AdaptSS_cervus_no_reproduction_system.R
+│       └── parallel_function_cervus.R
+│
+├── data
+│   └── island_area.txt
+├── tests
+│   ├── test-AdaptSS_constant_k.R
+│   ├── test-AdaptSS_no_plasticity.R
+│   ├── test-AdaptSS_no_recolonization.R
+│   ├── test-AdaptSS_no_reproduction.R
+│   ├── test-AdaptSS.R
+│   ├── test-run_generation_constant_k.R
+│   ├── test-run_generation_no_plasticity.R
+│   ├── test-run_generation_no_recolonization.R
+│   ├── test-run_generation_no_reproduction.R
+│   └── test-run_generation.R
+│
 ├── LICENSE
 └── README.md
 

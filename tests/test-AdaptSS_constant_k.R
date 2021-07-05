@@ -1,5 +1,6 @@
 library(testthat)
-source("./R/baseline/AdaptSS_cervus_K.R")
+
+source("./R/constant_k/AdaptSS_cervus_K.R")
 
 h2m <-  0.6521528
 vp0 <- 122.3638
@@ -35,7 +36,7 @@ test_that("AdaptSS result size", {
 test_that("Result class", {
   
   expect_equal(dim(res[[1]])[2], 3 )
-
+  
 })
 
 
